@@ -28,7 +28,7 @@ const collectIcon = (key) => {
 
 const write2Fs = () => {
     fs.writeFile(path.resolve(outputDir, 'data.json'), JSON.stringify(r), 'utf8', () => {
-        console.log('dqdqdqdqdqdqdq')
+        console.log('Written.')
     })
 }
 
