@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/Qotes/octicons-react#readme",
   "dependencies": {
-    "octicons": "^7.3.0"
+    "octicons": "^7.3.0",
+    "react": "^16.4.1"
   },
   "devDependencies": {
+    "@types/react": "^16.4.1",
     "typescript": "^3.0.0-dev.20180620"
   }
 }
