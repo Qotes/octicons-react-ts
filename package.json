@@ -1,0 +1,27 @@
+{
+  "name": "octicons-react",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "collect": "node src/scripts/collect.js",
+    "build": "npm run collect && "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qotes/octicons-react.git"
+  },
+  "author": "Sy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Qotes/octicons-react/issues"
+  },
+  "homepage": "https://github.com/Qotes/octicons-react#readme",
+  "dependencies": {
+    "octicons": "^7.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.0-dev.20180620"
+  }
+}
