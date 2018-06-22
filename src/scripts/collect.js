@@ -10,7 +10,7 @@ const r = {}
 const collectIcon = (key) => {
     const rr = {}
     const icon = octicons[key]
-    const customFields = ['name', 'keywords', 'width', 'height']
+    const customFields = [/* 'name', 'keywords',  */'width', 'height']
 
     const bleachRe = {
         re: /d="(.*)"/i,

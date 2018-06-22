@@ -1,11 +1,17 @@
 type IconOptions = {
     version: string
+    width?: number
+    height?: number
+    viewbox?: number[]
+    class: string[]
+    'aria-hidden': boolean
+    'aria-label': string
 }
 
 type Octicon = {
     readonly path: string
-    readonly name: string
-    readonly keywords: string[]
+    // readonly symbol: string
+    // readonly keywords: string[]
     width: number
     height: number
     options: IconOptions
