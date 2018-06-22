@@ -204,3 +204,18 @@ declare module 'octicons' {
     var octicons: Octicons
     export default octicons
 }
+
+declare module 'octicons-react-ts' {
+    type Props = {
+        name: optionalIcons
+        version?: string
+        width?: number
+        height?: number
+        viewbox?: number[]
+        class?: string[]
+        'aria-hidden'?: boolean
+        'aria-label'?: string
+    }
+    const Octicon: React.SFC<Props>
+    export default Octicon
+}
