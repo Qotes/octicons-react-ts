@@ -1,30 +1,39 @@
 {
-  "name": "octicons-react",
-  "version": "0.0.0",
+  "version": "1.73.0",
+  "name": "octicons-react-ts",
   "description": "",
-  "main": "index.js",
+  "main": "icon.tsx",
+  "files": [
+    "src",
+    "build/data.json"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "collect": "node src/scripts/collect.js",
     "collect-set": "node src/scripts/getIconSet.js",
+    "catch": "",
     "build": "npm run collect"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Qotes/octicons-react.git"
-  },
+  "repository": "https://github.com/Qotes/octicons-react.git",
   "author": "Sy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Qotes/octicons-react/issues"
   },
   "homepage": "https://github.com/Qotes/octicons-react#readme",
+  "keywords": [
+    "icons",
+    "svg",
+    "octicons",
+    "react",
+    "typescript"
+  ],
   "dependencies": {
-    "octicons": "^7.3.0",
     "react": "^16.4.1"
   },
   "devDependencies": {
     "@types/react": "^16.4.1",
+    "octicons": "^7.3.0",
     "typescript": "^3.0.0-dev.20180620"
   }
 }
