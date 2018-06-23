@@ -1,4 +1,8 @@
-type IconOptions = {
+type _Octicons = {
+    [k in _OptionalIcons]: _Octicon
+}
+
+type _IconOptions = {
     version: string
     width?: number
     height?: number
@@ -8,16 +12,16 @@ type IconOptions = {
     'aria-label': string
 }
 
-type Octicon = {
+type _Octicon = {
     readonly path: string
     // readonly symbol: string
     // readonly keywords: string[]
     width: number
     height: number
-    options: IconOptions
+    options: _IconOptions
 }
 
-type optionalIcons =
+type _OptionalIcons =
     'alert' |
     'arrow-down' |
     'arrow-left' |
@@ -196,26 +200,20 @@ type optionalIcons =
     'link-external' |
     'archive'
 
-type Octicons = {
-    [k in optionalIcons]: Octicon
-}
-
 declare module 'octicons' {
-    var octicons: Octicons
+    const octicons: Octicons
     export default octicons
+
+    export type Octicon = _Octicon
+
+    export type Octicons = _Octicons
+
+    export type IconOptions = _IconOptions
+
+    export type OptionalIcons = _OptionalIcons
 }
 
-declare module 'octicons-react-ts' {
-    type Props = {
-        name: optionalIcons
-        version?: string
-        width?: number
-        height?: number
-        viewbox?: number[]
-        class?: string[]
-        'aria-hidden'?: boolean
-        'aria-label'?: string
-    }
-    const Octicon: React.SFC<Props>
-    export default Octicon
+declare module "*/data.json" {
+    const v: _Octicons
+    export default v
 }
