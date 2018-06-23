@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": "src",
-    "outDir": "build/dist",
+    "outDir": "dist",
     "lib": ["es6", "dom"],
     "jsx": "react",
     "target": "es5",
