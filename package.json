@@ -1,5 +1,5 @@
 {
-  "version": "0.73.3",
+  "version": "0.73.4",
   "name": "octicons-react-ts",
   "description": "",
   "main": "dist/icon.js",
@@ -14,6 +14,7 @@
     "collect": "node src/scripts/collect.js",
     "collect-set": "node src/scripts/getIconSet.js",
     "catch": "npm run collect && npm run collect-set",
+    "build-css": "node-sass-chokidar ./src -o ./dist",
     "build": "tsc"
   },
   "repository": "https://github.com/Qotes/octicons-react.git",
@@ -33,6 +34,7 @@
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^16.4.1",
+    "node-sass-chokidar": "^1.3.0",
     "octicons": "^7.3.0",
     "react": "^16.4.1",
     "typescript": "^3.0.0-dev.20180620"

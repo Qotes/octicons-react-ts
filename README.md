@@ -1,6 +1,6 @@
 # octicons-react-ts
 
-Make [`octicons`](https://github.com/primer/octicons) more "Reactive" and typed.
+Make [`octicons`](https://github.com/primer/octicons) "Reacted" and "Typed".
 
 ## Usage
 
@@ -22,6 +22,24 @@ import Octicon from 'octicons-react'
 
 const Icon: React.SFC<{}> = ({}) => (<Octicon name="alert" />)
 ```
+
+### data.json
+
+If you're using webpack, remember to add this to your 'data.d.ts' or create a new one:
+
+```ts
+declare module '*.json'
+```
+
+### css
+
+You may import scss like
+
+```scss
+@import 'node_modules/octicons-react-ts/icon.scss'
+```
+
+And there is also the optional compiled `dist/icon.css`.
 
 ## Release
 
