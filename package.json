@@ -1,5 +1,5 @@
 {
-  "version": "1.73.0",
+  "version": "0.73.0",
   "name": "octicons-react-ts",
   "description": "",
   "main": "icon.tsx",
@@ -28,12 +28,11 @@
     "react",
     "typescript"
   ],
-  "dependencies": {
-    "react": "^16.4.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/react": "^16.4.1",
     "octicons": "^7.3.0",
+    "react": "^16.4.1",
     "typescript": "^3.0.0-dev.20180620"
   }
 }
