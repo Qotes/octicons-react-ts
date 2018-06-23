@@ -211,7 +211,7 @@ const Octicon: React.SFC<Props> = ({
     'aria-label': ariaLabel
 }) => {
     const w = width || octicons[name].width
-    const h = height || octicons[name].width
+    const h = height || octicons[name].height
     const vbox = viewbox || [0, 0, w, h]
     return (
         <svg
