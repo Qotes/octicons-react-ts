@@ -190,7 +190,7 @@ interface IconOptions {
     'aria-label': string
 }
 
-const defaultProps: IconOptions = {
+const constDefaultProps: IconOptions = {
     version: '1.1',
     class: [],
     'aria-hidden': false,
@@ -207,21 +207,21 @@ const Octicon: React.SFC<Props> = ({
     width, height, // optional
     version, viewbox,
     class: classNames,
-    'aria-hidden': ariainVisible,
+    'aria-hidden': ariaInvisible,
     'aria-label': ariaLabel
 }) => {
-    const w = width || octicons[name].width
-    const h = height || octicons[name].height
+    const w = octicons[name].width
+    const h = octicons[name].height
     const vbox = viewbox || [0, 0, w, h]
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             version={version}
-            width={w}
-            height={h}
+            width={width || w}
+            height={height || h}
             viewBox={vbox.join(' ')}
             className={'octicon' + ' ' + 'octicon-' + 'name' + ' ' + classNames.join(' ')}
-            aria-hidden={ariainVisible}
+            aria-hidden={ariaInvisible}
             aria-label={ariaLabel}
         >
             <path fillRule="evenodd" d={octicons[name].path} />
@@ -233,10 +233,10 @@ const withDefaultProps = <P extends object, DP extends Partial<P> = Partial<P>> 
     defaultProps: DP, component: React.ComponentType<P>
 ) => {
     type RequiredProps = Pick<P, Exclude<keyof P, keyof DP>>
-    type Props = Partial<DP> & Required<RequiredProps>
+    type TrueProps = Partial<DP> & Required<RequiredProps>
     component.defaultProps = defaultProps
 
-    return (component as React.ComponentType<any>) as React.ComponentType<Props>
+    return (component as React.ComponentType<any>) as React.ComponentType<TrueProps>
 }
 
-export default withDefaultProps(defaultProps, Octicon)
+export default withDefaultProps(constDefaultProps, Octicon)
