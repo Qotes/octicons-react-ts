@@ -1,34 +1,58 @@
 # octicons-react-ts
 
-Make [`octicons`](https://github.com/primer/octicons) "Reacted" and "Typed".
+Make [octicons](https://github.com/primer/octicons) "Reacted" and "Typed".
+
+![octicons](https://user-images.githubusercontent.com/54012/37737576-5d1e8c7a-2d11-11e8-8fd9-13956a241549.png)
+
+## Install
+
+```bash
+npm install octicons-react-ts --save
+```
+
+or with yarn
+
+```bash
+yarn add octicons-react-ts
+```
 
 ## Usage
 
 ### Typescript
 
-The package declared both `octicons-react` and `octicons`.
+The library is definitely typed, it also declared `octicons` with [`octicons.d.ts`](./src/octicons.d.ts).
 
 ### React
 
 It's exposed as a React SFC.
 
-If you're new to `octicons`, you may first check the [octicons-node](https://github.com/primer/octicons/blob/master/lib/octicons_node/README.md) examples.
-
-To use it as an component, you can just import and use it like:
+The entire library will be available when importing `@github/octicons-react`. Specifying the [icon you want to use][octicons], by supplying the `name=""` to the component.
 
 ```tsx
 import * as React from 'react'
 import Octicon from 'octicons-react'
 
-const Icon: React.SFC<{}> = ({}) => (<Octicon name="alert" />)
+const alertIcon: React.SFC<{}> = ({}) => (<Octicon name="alert" />)
 ```
 
-### data.json
+You may view all available icons in [Octicons](https://octicons.github.com/), or just view them with typescript composition in editor like VSCode.
 
-If you're using webpack, remember to add this to your 'data.d.ts' or create a new one:
+![rep](./rep.gif)
 
-```ts
-declare module '*.json'
+### options
+
+The `name` is required, the optinal settings include: `width`, `height`, `viewport`, `class`, `aria-hidden`, `aria-label`.
+
+Remember that the component turns out to be a SVG. You may accquire more infomations at [SVG: Scalable Vector Graphics | MDN](https://developer.mozilla.org/en-US/docs/Web/SVG). In short, they are almost pictures, css rules on pictures are probably compatible.
+
+The optional settings all has default values. The `width`, `height`, `viewport` are generated according to the data `octicons` provided.
+
+The default classes for these icons are `octicon` and `octicon-name` according to its name. You can add class to it with array of class names.
+
+`aria-hidden` is false and the default `aria-label` is the icon's name, these can also be specified.
+
+```tsx
+<Octicon name="arrow-left" width={20} height={30} viewbox={[0, 0, 30, 30]} class={['my-icon']} aira-hidden={true} aria-label="icon" />
 ```
 
 ### css
@@ -67,6 +91,24 @@ And try it out to choose wether to link it to your project.
 
 The *symbol*(name) and *keywords* are commented out in `collect.js` and `octicons.d.ts`, you may uncomment them and rebuild it.
 
+## Troubleshoot
+
+### package `data.json` not found ?
+
+If tsc or webpack complains, you may try to append this to your 'data.d.ts':
+
+```ts
+declare module '*.json'
+```
+
+### How can I only import the icons I need ?
+
+I suggest downloading the `.svg` file from [primer/octicons](https://github.com/primer/octicons) to you project in such situations.
+
+### May I use it with class and style sheet as a font ?
+
+I'm considering it.
+
 ## LICENSE
 
 ### octicons
@@ -76,7 +118,6 @@ The *symbol*(name) and *keywords* are commented out in `collect.js` and `octicon
 When using the GitHub logos, be sure to follow the [GitHub logo guidelines](https://github.com/logos).
 
 _Code License:_ [MIT](https://github.com/primer/octicons/blob/master/LICENSE)
-Applies to all other files
 
 ### octicons-react
 
