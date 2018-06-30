@@ -1,8 +1,8 @@
 # octicons-react-ts
 
-Make [octicons](https://github.com/primer/octicons) "Reacted" and "Typed".
+Make [Octicons](https://github.com/primer/octicons) "Reacted" and "Typed".
 
-![octicons](https://user-images.githubusercontent.com/54012/37737576-5d1e8c7a-2d11-11e8-8fd9-13956a241549.png)
+![Octicons](https://user-images.githubusercontent.com/54012/37737576-5d1e8c7a-2d11-11e8-8fd9-13956a241549.png)
 
 ## Install
 
@@ -24,9 +24,9 @@ The library is definitely typed, it also declared `octicons` with [`octicons.d.t
 
 ### React
 
-It's exposed as a React SFC.
+It's exposed as an React SFC.
 
-The entire library will be available when importing `@github/octicons-react`. Specifying the [icon you want to use][octicons], by supplying the `name=""` to the component.
+The entire library will be available when importing `octicons-react-ts`. Specifying the [icon you want to use][octicons], by supplying the `name=""` to the component.
 
 ```tsx
 import * as React from 'react'
@@ -35,7 +35,7 @@ import Octicon from 'octicons-react'
 const alertIcon: React.SFC<{}> = ({}) => (<Octicon name="alert" />)
 ```
 
-You may view all available icons in [Octicons](https://octicons.github.com/), or just view them with typescript composition in editor like VSCode.
+You may view all available icons in [Octicons](https://octicons.github.com/).
 
 ![rep](./rep.gif)
 
