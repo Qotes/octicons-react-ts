@@ -60,7 +60,7 @@ The default classes for these icons are `octicon` and `octicon-name` according t
 You may import scss like
 
 ```scss
-@import 'node_modules/octicons-react-ts/icon.scss'
+@import 'node_modules/octicons-react-ts/src/icon.scss'
 ```
 
 And there is also the optional compiled `dist/icon.css`.
