@@ -4,6 +4,8 @@ Make [Octicons](https://github.com/primer/octicons) "Reacted" and "Typed".
 
 ![Octicons](https://user-images.githubusercontent.com/54012/37737576-5d1e8c7a-2d11-11e8-8fd9-13956a241549.png)
 
+You may also view all available icons in [Octicons](https://octicons.github.com/).
+
 ## Install
 
 ```bash
@@ -41,7 +43,7 @@ You may view all available icons in [Octicons](https://octicons.github.com/).
 
 ### options
 
-The `name` is required, the optinal settings include: `width`, `height`, `viewport`, `class`, `aria-hidden`, `aria-label`.
+The `name` is required, the optinal settings include: `width`, `height`, `ratio`, `viewport`, `class`, `aria-hidden`, `aria-label`.
 
 Remember that the component turns out to be a SVG. You may accquire more infomations at [SVG: Scalable Vector Graphics | MDN](https://developer.mozilla.org/en-US/docs/Web/SVG). In short, they are almost pictures, css rules on pictures are probably compatible.
 
@@ -54,6 +56,12 @@ The default classes for these icons are `octicon` and `octicon-name` according t
 ```tsx
 <Octicon name="arrow-left" width={20} height={30} viewbox={[0, 0, 30, 30]} class={['my-icon']} aira-hidden={true} aria-label="icon" />
 ```
+
+**NOTE: About size.** The svg size is determined in this order:
+
+1. If `width` specified, the width of svg is set that value. `height` works the same way.
+2. If `ratio` specified, the svg will be scaled to that value by default size.
+3. The default size.
 
 ### css
 

@@ -182,6 +182,7 @@ type OptionalIcons =
 
 interface IconOptions {
     version: string
+    ratio?: number
     width?: number
     height?: number
     viewbox?: number[]
@@ -204,7 +205,7 @@ type Props = {
 
 const Octicon: React.SFC<Props> = ({
     name, // required
-    width, height, // optional
+    ratio, width, height, // optional
     version, viewbox,
     class: classNames,
     'aria-hidden': ariaInvisible,
@@ -217,8 +218,8 @@ const Octicon: React.SFC<Props> = ({
         <svg
             xmlns="http://www.w3.org/2000/svg"
             version={version}
-            width={width || w}
-            height={height || h}
+            width={width || (ratio ? ratio * w : w)}
+            height={height || (ratio ? ratio * h : h)}
             viewBox={vbox.join(' ')}
             className={'octicon' + ' ' + 'octicon-' + 'name' + ' ' + classNames.join(' ')}
             aria-hidden={ariaInvisible}
