@@ -7,6 +7,7 @@ type OptionalIcons =
     'arrow-left' |
     'arrow-right' |
     'arrow-up' |
+    'arrow-both' |
     'arrow-small-down' |
     'arrow-small-left' |
     'arrow-small-right' |
