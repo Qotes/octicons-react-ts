@@ -113,6 +113,8 @@ declare module '*.json'
 
 I suggest downloading the `.svg` file from [primer/octicons](https://github.com/primer/octicons) to you project in such situations.
 
+And as far as I'm concerned, the `@githubprime/octicons-react` is also a good choice.
+
 ### May I use it with class and style sheet as a font ?
 
 I'm considering it.
