@@ -14,8 +14,8 @@ type _IconOptions = {
 
 type _Octicon = {
     readonly path: string
-    // readonly symbol: string
-    // readonly keywords: string[]
+    readonly symbol: string
+    readonly keywords: string[]
     width: number
     height: number
     options: _IconOptions

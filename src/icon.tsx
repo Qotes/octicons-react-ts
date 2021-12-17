@@ -190,6 +190,7 @@ interface IconOptions {
     class: string[]
     'aria-hidden': boolean
     'aria-label': string
+    color?: string
 }
 
 const constDefaultProps: IconOptions = {
@@ -210,7 +211,8 @@ const Octicon: React.SFC<Props> = ({
     version, viewbox,
     class: classNames,
     'aria-hidden': ariaInvisible,
-    'aria-label': ariaLabel
+    'aria-label': ariaLabel,
+    color
 }) => {
     const w = octicons[name].width
     const h = octicons[name].height
@@ -226,7 +228,7 @@ const Octicon: React.SFC<Props> = ({
             aria-hidden={ariaInvisible}
             aria-label={ariaLabel}
         >
-            <path fillRule="evenodd" d={octicons[name].path} />
+            <path fillRule="evenodd" fill={color} d={octicons[name].path} />
         </svg>
     )
 }
